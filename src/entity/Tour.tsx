@@ -1,12 +1,18 @@
 export class Tour {
 
     constructor(
-        public name: string = '',
-        public length: number = 0,
+        public tourName: string = '',
         public date: string = '',
-        public temperatureC: number = 0,
-        public temperatureF: number = 0,
-        public summary: string = '',
+        public length: number = 0,
+        public altitudeGain: number,
+        public tourType: TourType
+        // public summary: string = '',
     ) { }
 
+}
+
+enum TourType {
+    MountainBike,
+    Nordic,
+    Ski
 }

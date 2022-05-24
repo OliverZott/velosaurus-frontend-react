@@ -7,7 +7,13 @@
 
 # Next steps
 - how to debug react !?!
+- POST example
+- resolve enum
+- bootstrap for tour exmaple page
 
+- how map repsonse object (DTO?)
+
+- DEPLOY
 
 # npm Commands
 - `npm start`

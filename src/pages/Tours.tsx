@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { Tour } from "../entity/Tour";
+import { Tour, TourType } from "../entity/Tour";
 
 const Tours = () => {
     const url = "https://localhost:7019/api/tour";
@@ -29,6 +29,7 @@ const Tours = () => {
                     <td>{tour.date}</td>
                     <td>{tour.length}</td>
                     <td>{tour.altitudeGain}</td>
+                    <td>{TourType[tour.tourType]}</td>
                     <td>
                         {/* <div>
                         <a href="#" className="btn btn-sm btn-outline-secondary" onClick={() => showDetails(tour.id)}>Show</a>
@@ -51,6 +52,7 @@ const Tours = () => {
                             <th scope="col">Date</th>
                             <th scope="col">Length</th>
                             <th scope="col">Altitude</th>
+                            <th scope="col">Type</th>
                         </tr>
                     </thead>
                     <tbody>

@@ -6,14 +6,22 @@
 
 
 # Next steps
+- Logging & Exception Handling
+    - https://docs.datalust.co/docs/using-nodejs
+    - 
 - how to debug react !?!
 - POST example
 - resolve enum
+
+
+### Architecture
+- how map repsonse object (DTO?)
+- DEPLOY
+
+### Done
 - bootstrap for tour exmaple page
 
-- how map repsonse object (DTO?)
 
-- DEPLOY
 
 # npm Commands
 - `npm start`

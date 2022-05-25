@@ -11,7 +11,7 @@ export class Tour {
 
 }
 
-enum TourType {
+export enum TourType {
     MountainBike,
     Nordic,
     Ski

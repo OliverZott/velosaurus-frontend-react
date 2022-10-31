@@ -3,7 +3,8 @@ import { useEffect, useState } from "react";
 import { Tour, TourType } from "../entity/Tour";
 
 const Tours = () => {
-    const url = "https://localhost:7019/api/tour";
+    // const url = "https://localhost:7019/api/tour";
+    const url = "https://velosaurus-api.azurewebsites.net/api/tour";
     const [tours, setTours] = useState<Tour[]>([]);
 
 

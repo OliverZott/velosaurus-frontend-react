@@ -10,7 +10,7 @@
 - DevOps: **Azure DevOps**
   - <https://dev.azure.com/>
 
-![Project Structure](velosaurus.drawio.png )
+![Project Structure](velosaurus_architecture.jpg)
 
 ## Run App
 

@@ -1,4 +1,18 @@
-# Run and Debug App
+# Velosaurus Frontend
+
+- Backend: **ASP.Net Core**
+- Frontend: **React**
+- Database: **MongoDB**
+- Repo & Pipelines: **Github**
+- Hosting: **Heroku** amd **Azure**
+  - <https://portal.azure.com/>
+  - <https://dashboard.heroku.com/>
+- DevOps: **Azure DevOps**
+  - <https://dev.azure.com/>
+
+![Project Structure](velosaurus.drawio.png )
+
+## Run App
 
 - `npm start`
 
@@ -8,7 +22,7 @@ Resources:
   - <https://velosaurus-api.azurewebsites.net/api/tour>
 - DB: <https://cloud.mongodb.com/>
 
-# Project Setup
+## Project Setup
 
 - `npx create-react-app velosaurus-frontend --template typescript`
 - `npm i react-router-dom @types/react-router-dom`
@@ -21,7 +35,7 @@ Update Dependecies:
 - `npm install <package>@latest`
 - Reactupdate: `npm install react react-dom @types/react @types/react-dom`
 
-# Next steps
+## Next steps
 
 - Logging & Exception Handling
   - <https://docs.datalust.co/docs/using-nodejs>
@@ -30,16 +44,16 @@ Update Dependecies:
 - POST example
 - resolve enum
 
-## Architecture
+### Architecture
 
 - how map repsonse object (DTO?)
 - DEPLOY
 
-## Done
+### Done
 
 - bootstrap for tour exmaple page
 
-# npm Commands
+## npm Commands
 
 - `npm start`
 - `npm test`

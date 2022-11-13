@@ -2,9 +2,11 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { Tour, TourType } from "../entity/Tour";
 
+
 const Tours = () => {
     // const url = "https://localhost:7019/api/tour";
     const url = "https://velosaurus-api.azurewebsites.net/api/tour";
+
     const [tours, setTours] = useState<Tour[]>([]);
 
 
@@ -13,13 +15,9 @@ const Tours = () => {
             async () => {
                 const { data } = await axios.get(url);
                 setTours(data);
-                console.log(data.data);
-                console.log(data);
             }
         )()
     }, []);
-
-
 
 
     const renderTour = () => {
@@ -40,6 +38,7 @@ const Tours = () => {
             )
         })
     }
+
 
     return (
         <div>

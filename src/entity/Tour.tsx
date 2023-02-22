@@ -1,6 +1,7 @@
 export class Tour {
 
     constructor(
+        public id: string = '',
         public tourName: string = '',
         public date: string = '',
         public length: number = 0,

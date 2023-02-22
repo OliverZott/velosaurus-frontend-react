@@ -1,10 +1,12 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { Tour, TourType } from "../entity/Tour";
+import { Link } from "react-router-dom";
 
 const Tours = () => {
-    // const url = "https://localhost:7019/api/tour";
-    const url = "https://velosaurus-api.azurewebsites.net/api/tour";
+    const url = "https://localhost:7019/api/tour";
+    // const url = "https://velosaurus-api.azurewebsites.net/api/tour";
+
     const [tours, setTours] = useState<Tour[]>([]);
 
 
@@ -19,9 +21,6 @@ const Tours = () => {
         )()
     }, []);
 
-
-
-
     const renderTour = () => {
         return tours.map((tour: Tour) => {
             return (
@@ -32,9 +31,10 @@ const Tours = () => {
                     <td>{tour.altitudeGain}</td>
                     <td>{TourType[tour.tourType]}</td>
                     <td>
-                        {/* <div>
-                        <a href="#" className="btn btn-sm btn-outline-secondary" onClick={() => showDetails(tour.id)}>Show</a>
-                    </div> */}
+                        <div>
+                            <Link to={`/tours/${tour.id}`} state={{ data: tour }} className="btn btn-sm btn-outline-secondary">Show</Link>
+                            {/* <a href="#" className="btn btn-sm btn-outline-secondary" onClick={() => showDetails(tour.id)}>Show</a> */}
+                        </div>
                     </td>
                 </tr>
             )

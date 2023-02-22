@@ -12,9 +12,11 @@
 
 ![Project Structure](velosaurus_architecture.jpg)
 
-## Run App
+## Run & Debug App
 
 - `npm start`
+- `Ctrl + Shift * P` -> **Toggle Auto Attach Smart**
+- `F5` - *Launch Edge against Localhost*
 
 Resources:
 
@@ -37,10 +39,9 @@ Update Dependecies:
 
 ## Next steps
 
+- Parse distance / DateTime ...
 - Logging & Exception Handling
   - <https://docs.datalust.co/docs/using-nodejs>
-  -
-- how to debug react !?!
 - POST example
 - resolve enum
 

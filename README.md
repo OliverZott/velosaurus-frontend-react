@@ -20,10 +20,12 @@
 
 ## Run docker container
 
-- `docker build --tag 'velo-fe-image' .`
-- `docker run -p 3000:3000 velo-fe-image npm start`
+- `docker build --tag '<image-tag>' .`
+- `docker run -p 3000:3000 <image-tag> npm start`
 OR
 - `docker compose up`
+- `docker compose down`
+- `docker compose build` rebuild image, if changes in code
 
 Resources:
 

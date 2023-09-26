@@ -5,7 +5,8 @@ import { Link } from "react-router-dom";
 
 
 const Tours = () => {
-    const url = "https://localhost:7019/api/tour";
+    // const url = "https://localhost:7019/api/tour";  // local dev
+    const url = "http://localhost:8000/api/tour";  // docker dev
     // const url = "https://velosaurus-api.azurewebsites.net/api/tour";
 
     const [tours, setTours] = useState<Tour[]>([]);

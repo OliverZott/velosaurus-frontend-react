@@ -4,7 +4,7 @@ import { Navbar } from "./components/Navbar";
 import { About } from "./pages/About";
 import Home from "./pages/Home";
 import Tours from "./pages/Tours";
-import TourDetails from "./pages/TourDetails";
+
 
 function App() {
   return (

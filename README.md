@@ -12,11 +12,18 @@
 
 ![Project Structure](velosaurus_architecture.jpg)
 
-## Run & Debug App
+## Run & Debug App locally
 
 - `npm start`
 - `Ctrl + Shift * P` -> **Toggle Auto Attach Smart**
 - `F5` - *Launch Edge against Localhost*
+
+## Run docker container
+
+- `docker build --tag 'velo-fe-image' .`
+- `docker run -p 3000:3000 velo-fe-image npm start`
+OR
+- `docker compose up`
 
 Resources:
 

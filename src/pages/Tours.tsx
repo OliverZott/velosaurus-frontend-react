@@ -1,12 +1,12 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { Tour, TourType } from "../entity/Tour";
-import { Link } from "react-router-dom";
+import { Link, Route } from "react-router-dom";
 
 
 const Tours = () => {
-    // const url = "https://localhost:7019/api/tour";  // local dev
-    const url = "http://localhost:8000/api/tour";  // docker dev
+    const url = "https://localhost:7019/api/tour";  // local dev
+    // const url = "http://localhost:8000/api/tour";  // docker dev
     // const url = "https://velosaurus-api.azurewebsites.net/api/tour";
 
     const [tours, setTours] = useState<Tour[]>([]);
@@ -24,7 +24,7 @@ const Tours = () => {
     const renderTour = () => {
         return tours.map((tour: Tour) => {
             return (
-                <tr key={tour.date}>
+                <tr key={tour.id}>
                     <td>{tour.tourName}</td>
                     <td>{tour.date}</td>
                     <td>{tour.length}</td>
@@ -32,8 +32,7 @@ const Tours = () => {
                     <td>{TourType[tour.tourType]}</td>
                     <td>
                         <div>
-                            <Link to={`/tours/${tour.id}`} state={{ data: tour }} className="btn btn-sm btn-outline-secondary">Show</Link>
-                            {/* <a href="#" className="btn btn-sm btn-outline-secondary" onClick={() => showDetails(tour.id)}>Show</a> */}
+                            <Link to={`/tourdetails/${tour.id}`} state={{ data: tour }} className="btn btn-sm btn-outline-secondary">Show</Link>
                         </div>
                     </td>
                 </tr>

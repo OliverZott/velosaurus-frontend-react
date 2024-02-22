@@ -1,15 +1,12 @@
-export class Tour {
+export interface Tour {
 
-    constructor(
-        public id: string = '',
-        public tourName: string = '',
-        public date: string = '',
-        public length: number = 0,
-        public altitudeGain: number,
-        public tourType: TourType
-        // public summary: string = '',
-    ) { }
-
+    id: string,
+    tourName: string,
+    date: string,
+    length: number,
+    altitudeGain: number,
+    tourType: TourType
+    description: string,
 }
 
 export enum TourType {

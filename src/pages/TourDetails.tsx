@@ -18,7 +18,7 @@ export default function TourDetails() {
     return (
         <div>
             <h1>{tour.tourName}</h1>
-
+            <p>{tour.description}</p>
         </div>
     )
 }

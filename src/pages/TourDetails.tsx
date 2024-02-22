@@ -14,6 +14,7 @@ export default function TourDetails() {
     console.log("Tour", tour);
 
 
+    // TODO: make api request for the tours/{id} endpoint instead hand over the tours object (which has ni description)
 
     return (
         <div>

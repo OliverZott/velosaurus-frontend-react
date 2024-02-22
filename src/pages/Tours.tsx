@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { Tour, TourType } from "../entity/Tour";
-import { Link, Route } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 
 const Tours = () => {

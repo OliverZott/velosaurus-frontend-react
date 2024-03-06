@@ -14,6 +14,7 @@
 
 ## Run & Debug App locally
 
+- `npm install` first time after cloning
 - `npm start`
 - `Ctrl + Shift * P` -> **Toggle Auto Attach Smart**
 - `F5` - *Launch Edge against Localhost*

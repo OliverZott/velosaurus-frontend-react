@@ -69,3 +69,56 @@ Update Dependecies:
 - `npm test`
 - `npm run build`
 - `npm run eject`
+
+## TODO
+
+Debug in container (copilot answer):
+
+1. **Dockerize Your React App**:
+    - First, ensure that your **React** app is properly **Dockerized**. If you haven't done this yet, follow these steps:
+        - Create a **Dockerfile** for your **React** app. This file specifies how to build an image of your application.
+        - Build the Docker image using the **Dockerfile**.
+        - Run a container based on the created image.
+
+2. **Start the Container in Interactive Mode**:
+    - To debug interactively, you'll need to run your container in **interactive mode**.
+    - Use the following command to start your existing **React** container interactively:
+
+        ```bash
+        docker exec -it <container_name_or_id> sh
+        ```
+
+        - Replace `<container_name_or_id>` with the actual name or ID of your **React** container.
+        - The `sh` command opens a shell inside the container.
+
+3. **Debugging Inside the Container**:
+    - Once inside the container, navigate to your **React** app directory (usually `/app` or the path where your app is located).
+    - You can now use standard debugging tools like **console logs**, **browser developer tools**, or any other debugging techniques you prefer.
+    - Remember that the code inside the container is the same as your local code, so you can debug it as usual.
+
+4. **Inspect Network and Ports**:
+    - Ensure that the container's ports are correctly mapped to your host machine. If your **React** app runs on port 3000 inside the container, make sure it's accessible on the same port outside the container.
+    - Check if the app is running by accessing it in your browser at `http://localhost:3000`.
+
+5. **Debugging with Visual Studio Code (Optional)**:
+    - If you're using **Visual Studio Code**, you can set up debugging configurations to attach to your running container.
+    - Install the **Docker** extension for **VS Code**.
+    - Create a `launch.json` configuration that specifies how to attach the debugger to your **React** app running inside the container.
+    - Example configuration for **VS Code**:
+
+        ```json
+        {
+            "version": "0.2.0",
+            "configurations": [
+                {
+                    "name": "Docker React Debug",
+                    "type": "node",
+                    "request": "attach",
+                    "port": 9229,
+                    "address": "localhost",
+                    "localRoot": "${workspaceFolder}",
+                    "remoteRoot": "/app"
+                }
+            ]
+        }
+        ```

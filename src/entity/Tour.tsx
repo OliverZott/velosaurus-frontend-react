@@ -1,15 +1,15 @@
 export interface Tour {
 
-    id: string,
-    tourName: string,
-    date: string,
-    length: number,
-    altitudeGain: number,
-    tourType: TourType
-    description: string,
+    Id: string,
+    Name: string,
+    Date: string,
+    Length: number,
+    AltitudeGain: number,
+    ActivityType: ActivityType
+    Description: string,
 }
 
-export enum TourType {
+export enum ActivityType {
     MountainBike,
     Nordic,
     Ski

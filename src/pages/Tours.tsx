@@ -1,12 +1,12 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { Tour, TourType } from "../entity/Tour";
+import { Tour, ActivityType } from "../entity/Tour";
 import { Link } from "react-router-dom";
 
-
+// TODO: chsnge scopes/namings   ...tour->activity, mountain->location
 const Tours = () => {
-    const url = "https://localhost:7019/api/tour";  // local dev
-    // const url = "http://localhost:8000/api/tour";  // docker dev
+    const url = "https://localhost:7019/api/activity";  // local dev
+    // const url = "http://localhost:8000/api/activity";  // docker dev
     // const url = "https://velosaurus-api.azurewebsites.net/api/tour";
 
     const [tours, setTours] = useState<Tour[]>([]);
@@ -16,23 +16,25 @@ const Tours = () => {
         (
             async () => {
                 const { data } = await axios.get(url);
-                setTours(data);
+                var tours = data.Items;
+                setTours(data.Items);
             }
         )()
     }, []);
 
     const renderTour = () => {
+        if (!tours.some) return;
         return tours.map((tour: Tour) => {
             return (
-                <tr key={tour.id}>
-                    <td>{tour.tourName}</td>
-                    <td>{tour.date}</td>
-                    <td>{tour.length}</td>
-                    <td>{tour.altitudeGain}</td>
-                    <td>{TourType[tour.tourType]}</td>
+                <tr key={tour.Id}>
+                    <td>{tour.Name}</td>
+                    <td>{tour.Date}</td>
+                    <td>{tour.Length}</td>
+                    <td>{tour.AltitudeGain}</td>
+                    <td>{ActivityType[tour.ActivityType]}</td>
                     <td>
                         <div>
-                            <Link to={`/tourdetails/${tour.id}`} state={{ data: tour }} className="btn btn-sm btn-outline-secondary">Show</Link>
+                            <Link to={`/tourdetails/${tour.Id}`} state={{ data: tour }} className="btn btn-sm btn-outline-secondary">Show</Link>
                         </div>
                     </td>
                 </tr>

@@ -14,12 +14,12 @@ export default function TourDetails() {
     console.log("Tour", tour);
 
 
-    // TODO: make api request for the tours/{id} endpoint instead hand over the tours object (which has ni description)
+    // TODO: make api request for the tours/{id} endpoint instead hand over the tours object (which has no description)
 
     return (
         <div>
-            <h1>{tour.tourName}</h1>
-            <p>{tour.description}</p>
+            <h1>{tour.Name}</h1>
+            <p>{tour.Description}</p>
         </div>
     )
 }

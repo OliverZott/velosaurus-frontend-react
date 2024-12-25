@@ -16,7 +16,6 @@ const Tours = () => {
         (
             async () => {
                 const { data } = await axios.get(url);
-                var tours = data.Items;
                 setTours(data.Items);
             }
         )()

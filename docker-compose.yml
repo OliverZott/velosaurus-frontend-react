@@ -1,0 +1,9 @@
+services:
+
+  velosaurus-frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: npm start
+    ports:
+      - "3000:3000"
